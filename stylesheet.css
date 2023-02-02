@@ -1,0 +1,675 @@
+/*fonts*/
+@font-face {
+    font-family: 'ragasta';
+    src: url('fonts/Ragasta.woff2')format('woff2');
+    src: url('fonts/Ragasta.woff')format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+/*scroll*/
+html,body{
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;  
+    cursor: url("Images/cursor.png"), auto;
+}
+
+/*gradient background
+auteur : Yuujin on Codepen.io : https://codepen.io/Jinnniu/pen/YzxvyOP*/
+body{
+    background-size: 300% 300%;
+    background-color:#ffc099;
+    background-color:#ff0000;background-image: radial-gradient(at 97% 97%, rgb(177, 177, 0) 0, transparent 47%), radial-gradient(at 1% 86%, rgb(26, 0, 154) 0, transparent 42%), radial-gradient(at 63% 9%, rgb(0, 93, 129) 0, transparent 50%), radial-gradient(at 34% 44%, rgb(115, 99, 0) 0, transparent 44%), radial-gradient(at 92% 54%, rgb(176, 0, 138) 0, transparent 50%), radial-gradient(at 89% 15%, rgb(0, 109, 9) 0, transparent 50%), radial-gradient(at 1% 0%, rgb(160, 0, 184) 0, transparent 50%), radial-gradient(at 49% 78%, rgb(172, 27, 152) 0, transparent 50%);
+    animation: gradient 30s linear infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }	
+}
+
+/*liens*/
+a{
+    text-decoration: none;      
+}
+
+/*page accueil*/
+.title{
+    display: block;
+    margin: 0;
+    width: fit-content;
+    font-family: ragasta, 'serif';
+    text-align: center;
+    font-size: 6em;
+    animation-name: title-animation;
+    animation-duration: 2s;
+    color: #fafafa;
+}
+
+.title:hover{
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 42px rgb(155, 156, 171, 0.951),
+    0 0 77px rgb(155, 156, 171, 0.951),
+    0 0 100px rgb(155, 156, 171, 0.951);
+}
+
+@keyframes title-animation {
+    from {
+      margin-left: -20px;
+      opacity:0;
+      filter:blur(5px);
+    }
+    to {
+      margin-left: 0px;
+      opacity:1;
+      filter:blur(0px);
+    }
+}
+
+.entrance{
+    display: flex;
+    height: 100vh;
+    scroll-snap-align: start;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+/*texte vertical*/
+#vertical{
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    max-height: 100vh;
+    padding: 0.5em;
+    text-align: right;
+    white-space: nowrap;
+    position: absolute;
+    text-transform: uppercase;
+    line-height: 0;
+    text-align: left;
+    margin-top: 16px;     
+}
+  
+#verticaltxt{
+    font-family: DM Sans, sans-serif;
+    color: #fafafa; 
+}
+
+hr{
+    color: #fafafa;
+    border: solid 1px #fafafa;
+}
+
+.entrancetxt{
+    margin-left: 124px;
+    margin-right: 124px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 100vw;
+    display: block;
+}
+
+/*arrows up & down*/
+img#arrowup{
+    width: 2em;
+    background: none;
+    border: none;
+    filter: none;
+    animation: none;
+    box-shadow: none;
+    float: center;
+    position: relative;
+    display: block;
+    margin: 32px;
+}
+
+img#arrowdown{
+    width: 2em;
+    background: none;
+    border: none;
+    filter: none;
+    animation: none;
+    box-shadow: none;
+    float: center;
+    position: relative;
+    display: block;
+    margin: 32px;
+}
+
+.arrowdown{
+    z-index: 2;
+    
+}
+
+/*page présentation*/
+.dessin{
+    float: left;
+    width: 30%;
+    max-width: 300px;
+    position: relative;
+    display: block;
+}
+
+.presenttxt{
+    float: right;
+    display: block;
+    margin: auto;
+}
+
+.presentation{
+    margin-left: 64px;
+    margin-right: 64px;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    scroll-snap-align: start;
+    flex-wrap: nowrap;
+    align-content: center;
+    flex-direction: row;
+}
+
+.present{
+    width: 50%;
+    float: right;
+    font-family: 'DM Sans', sans-serif;
+    text-align: justify;
+    color: #fafafa;
+}
+
+section{
+    scroll-snap-align: start;
+    color: #fafafa;
+}
+
+/*liste analogies*/
+div#text{
+    margin-top: auto;
+    width: fit-content;
+    display: flex;
+    height: 100vh;
+    color: #fafafa;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 64px;
+    margin-left: 64px;
+}
+
+.titletext{
+    display: block;
+    width: 50%;
+    margin-top: 100px;
+}
+
+.list{
+    scroll-snap-align: center;
+}
+
+.justify{
+    display: block;
+    width: 100%;
+    margin-top: 0;
+    text-align:justify;
+    font-family: 'DM Sans', sans-serif;
+}
+
+h2{
+    text-align: center;
+    font-size: 2em;
+    display: block;
+    font-family: ragasta, 'serif';
+    margin-top: auto;
+}
+
+img{
+    float: right;
+    display: block;
+    size-adjust:inherit;
+    width: 20%;
+    height: auto;
+    border-radius: 50px;
+    position: relative;
+    background: rgba(250,250,250,0.80);
+    box-shadow: 0 8px 32px 0 rgba(155, 156, 171, 0.951);
+    backdrop-filter: blur( 4.5px );
+    -webkit-backdrop-filter: blur( 4.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    animation: lumiere 3s infinite linear;
+    transition: transform .4s;    
+}
+
+/*effet néon qui clignote : Amézir Messaoud également sur le titre d'accueil, les zones input et textarea quand on clique dessus*/
+@keyframes lumiere {
+    0%{
+        box-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 42px rgb(155, 156, 171, 0.951),
+        0 0 77px rgb(155, 156, 171, 0.951),
+        0 0 100px rgb(155, 156, 171, 0.951);
+    }
+    50%{
+        box-shadow:
+        0 0 7px rgba(155, 156, 171, 0.951),
+        0 0 10px #fff,
+        0 0 32px rgb(2155, 156, 171, 0.951),
+        0 0 87px rgb(155, 156, 171, 0.951),
+        0 0 120px rgb(155, 156, 171, 0.951);
+    }
+        
+}
+
+/*zoom au survol : code by codeur.com on codepen.io : https://codepen.io/codeur-com/pen/xxWMOmb également sur le flêches haut et bas et les show-popup des deux popup*/
+img:hover{
+    -ms-transform: scale(1.2); 
+    -webkit-transform: scale(1.2); 
+    transform: scale(1.2); 
+}
+
+/*formulaire*/
+form{
+    float: center;
+    display: block;
+    position: relative;
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+    padding: 16px;
+}
+
+label{
+    display: block;
+    font-family: DM sans, sans serif;
+    margin-top: 16px;
+    margin-bottom: 4px;
+}
+
+input{
+    background: rgba( 255, 255, 255, 0.65 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 6px );
+    -webkit-backdrop-filter: blur( 3px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding: 8px;
+    display: block;
+    float: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
+}
+
+input:focus{
+    animation: lumiere 3s infinite linear;
+    border: none;
+    border-radius: 10px;
+}
+
+    @keyframes lumiere {
+        0%{
+            box-shadow:
+            0 0 7px #fff,
+            0 0 10px #fff,
+            0 0 42px rgb(155, 156, 171, 0.951),
+            0 0 77px rgb(155, 156, 171, 0.951),
+            0 0 100px rgb(155, 156, 171, 0.951);
+        }
+        50%{
+            box-shadow:
+            0 0 7px rgba(155, 156, 171, 0.951),
+            0 0 10px #fff,
+            0 0 32px rgb(2155, 156, 171, 0.951),
+            0 0 87px rgb(155, 156, 171, 0.951),
+            0 0 120px rgb(155, 156, 171, 0.951);
+        }
+    }
+
+textarea{
+    background: rgba( 255, 255, 255, 0.65 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 6px );
+    -webkit-backdrop-filter: blur( 3px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    margin-bottom: 16px;
+    font-family: DM Sans, sans-serif;
+    padding: 12px;
+}
+
+textarea:focus{
+    animation: lumiere 3s infinite linear;
+    border: none;
+}
+
+    @keyframes lumiere {
+        0%{
+            box-shadow:
+            0 0 7px #fff,
+            0 0 10px #fff,
+            0 0 42px rgb(155, 156, 171, 0.951),
+            0 0 77px rgb(155, 156, 171, 0.951),
+            0 0 100px rgb(155, 156, 171, 0.951);
+        }
+        50%{
+            box-shadow:
+            0 0 7px rgba(155, 156, 171, 0.951),
+            0 0 10px #fff,
+            0 0 32px rgb(2155, 156, 171, 0.951),
+            0 0 87px rgb(155, 156, 171, 0.951),
+            0 0 120px rgb(155, 156, 171, 0.951);
+        }
+    
+}
+
+h1{
+    font-family: ragasta, 'serif';
+    text-align: center;
+}
+
+input[type="submit"]{
+    box-shadow: 0px 0px 20px -20px;
+    cursor: pointer;
+    background: rgba( 255, 255, 255, 0.65 );
+    transition: all 0.2s ease-in-out 0ms;
+    user-select: none;
+    font-family: DM Sans, auto;
+}
+
+input[type="submit"]:hover {
+   background-color: rgb(54, 53, 53);
+   box-shadow: 0px 0px 20px -18px;
+   color: white;
+}
+
+input[type="submit"]:active {
+   transform: scale(0.95);
+}
+
+/*modal*/
+#overlay{
+    display: none;
+    align-items:center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.5);
+}
+
+#popup{
+    max-width:500px;
+    height: fit-content;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    margin-top: 180px;
+    padding: 32px;
+    position:relative;
+    background: rgba( 255, 255, 255, 0.55 );
+    box-shadow: 0 8px 32px 0 rgba(155, 156, 171, 0.951);
+    backdrop-filter: blur( 4.5px );
+    -webkit-backdrop-filter: blur( 4.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+/*code by @whitenervosa on uiverse.io* : https://uiverse.io/WhiteNervosa/popular-ladybug-27/
+Également sur show-popup2*/
+.show-popup{
+    font-size: 1.25em;
+    margin-top: 16px;
+    color: #fafafa;
+    font-family: DM Sans, auto;
+    font-weight: 800;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+    transition: transform .4s;   
+}
+  
+.show-popup:focus,
+.show-popup:hover {
+    color: #fff;
+    -ms-transform: scale(1.1); 
+    -webkit-transform: scale(1.1); 
+    transform: scale(1.1); 
+}
+  
+.show-popup:focus:after,
+.show-popup:after {
+    width: 100%;
+    left: 0%;
+}
+
+.show-popup:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+}
+   
+.show-popup:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+/*code by e-coders on uiverse.io : https://uiverse.io/e-coders/new-shrimp-32 également sur close-popup2 et le bouton submit*/
+#close-popup{
+    width: fit-content;
+    min-width: 100px;
+    height: 32px;
+    position: relative;
+    display: block;
+    padding: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 16px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0px 0px 20px -20px;
+    cursor: pointer;
+    background-color: white;
+    transition: all 0.2s ease-in-out 0ms;
+    user-select: none;
+    font-family: DM Sans, auto;
+}
+
+#close-popup:hover {
+   background-color: rgb(54, 53, 53);
+   box-shadow: 0px 0px 20px -18px;
+   color: white;
+}
+
+#close-popup:active {
+   transform: scale(0.95);
+}
+
+.popuptxt{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-family: 'DM Sans', sans-serif;
+    margin: auto;
+    padding: 16px;
+    color: #fafafa;
+}
+
+/*mentions légales footer dans fenêtre modale*/
+footer{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#overlay2{
+    display: none;
+    align-items:center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.5);
+    overflow-x: scroll;
+}
+
+#popup2{
+    max-width: 500px;
+    min-width: 200px;
+    height: fit-content;
+    inset: 0px;
+    margin-top: 180px;
+    margin-bottom: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 32px;
+    position: relative;
+    background: rgba(255, 255, 255, 0.55);
+    box-shadow: rgb(155 156 171 / 95%) 0px 8px 32px 0px;
+    backdrop-filter: blur(4.5px);
+    -webkit-backdrop-filter: blur( 4.5px );
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+#overlay2>#popup2{
+    touch-action: pan-x pinch-zoom;
+}
+
+#show-popup2{
+    font-size: 1.25em;
+    color: #fafafa;
+    font-family: DM Sans, auto;
+    font-weight: 800;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-top: auto;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+    transition: transform .4s;
+}
+  
+#show-popup2:focus,
+#show-popup2:hover {
+    color: #fff;
+    -ms-transform: scale(1.1); 
+    -webkit-transform: scale(1.1); 
+    transform: scale(1.1);
+}
+  
+#show-popup2:focus:after,
+#show-popup2:after {
+    width: 100%;
+    left: 0%;
+}
+  
+#show-popup2:after{
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+}
+   
+#show-popup2:active{
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+#close-popup2{
+    width: fit-content;
+    min-width: 100px;
+    height: 32px;
+    position: relative;
+    display: block;
+    padding: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 32px;
+    border-radius: 24px;
+    border: none;
+    box-shadow: 0px 0px 20px -20px;
+    cursor: pointer;
+    background-color: #fafafa;
+    transition: all 0.2s ease-in-out 0ms;
+    user-select: none;
+    font-family: DM Sans, auto;
+}
+
+#close-popup2:hover {
+   background-color: rgb(54, 53, 53);
+   box-shadow: 0px 0px 20px -18px;
+   color: #fafafa;
+}
+
+#close-popup2:active {
+   transform: scale(0.95);
+}
+
+.popuptxt2{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-family: 'DM Sans', sans-serif;
+}
+
+/*utilisateurs*/
+img.img{
+    width: 20%;
+    float: none;
+    position: relative;
+}

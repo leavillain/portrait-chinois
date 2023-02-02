@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Portrait Chinois</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="icon" href="Images/icon.png">
+
+</head>
+
+<body>
+    <!--Page accueil-->
+    <div class="entrance" id="entrance">
+        <div class="entrancetxt">
+            <h1 class="title">
+            PORTRAIT</h1>
+            <h1 class="title">CHINOIS</h1>
+            <hr>
+
+            <button class="show-popup" id="show-popup"><span>C'est quoi ?</span></button>
+
+            <a href="#presentation"><img src="Images/arrowdown.png" id="arrowdown"></a>
+        </div>
+    <!--popup explication-->
+        <div class="overlay" id="overlay">
+            <div id="popup">
+                <h3 class="popuptxt">Qu'est-ce que c'est un portrait chinois ?</h3>
+                <p class="popuptxt">Un portrait chinois est un jeu permettant de mieux connaître une personne à travers des analogies auxquelles elle pourrait s'identifier.</p>
+                <button class="close-popup" id="close-popup">Fermer</button>
+            </div>
+        </div>
+        <!--texte vertical-->
+        <div id="vertical">
+            <a href="#presentation"><p id="verticaltxt">Léa Villain</p><p id="verticaltxt">BUT MMI1</p></a>
+        </div>
+    </div>
+
+    <!--Page présentation-->
+    <section id="presentation">
+        <div class="presentation" id="presentation">
+            <img class="dessin" src="Images/dessin.png">
+            <div class="present">
+                <h2 class="presenttxt>">
+                Qui suis-je ? 
+                </h2>
+                <p class="presenttxt">
+                Je suis Léa, étudiante en première année de DUT MMI à Champs-sur-Marne. Ce portrait chinois a été réalisé dans le cadre d'un projet tutoré étudiant. Il a pour but de nous permettre de mettre en pratique nos connaissances des langages de programmations comme HTML, CSS et JavaScript mais aussi de dévoiler une partie de nous même à travers des analogies afin que vous puissiez mieux nous connaître. 
+                J'espère que mon portrait chinois vous plaira !
+                </p>   
+       
+                <a href="#Lana"><img src="Images/arrowdown.png" id="arrowdown"></a>
+            </div>
+        </div>
+    </section>
+    
+    <!--analogies-->
+    <div id="list"></div>
+
+    <!--Formulaire-->
+    <section id="formulaire">
+        <form>
+            <legend><h1>À vous de jouer !</h1></legend>
+
+            <label for="Email">Email</label>
+            <input type="email" name="Nom" required id="Email">
+
+            <label for="Analogies" >Si j'étais...</label>
+            <input type="text" name="Analogies" required id="Analogies" placeholder="une tortue ninja">
+
+            <label for="valeurAnalogies">Je serais...</label>
+            <input type="text" name="valeurAnalogies" required id="valeurAnalogies" placeholder="Donatello">
+
+            <label for="image">Url de l'image</label>
+            <input type="url" id="image" name="image" placeholder="url d'une image" required>
+
+            <label for="justify">Car...</label>
+            <textarea id="justify" name="story"
+            rows="5" cols="40" placeholder="C'est le.a meilleur.e">
+            </textarea>
+
+            <a href="#vous"><input type="submit" value="Envoyer" id="Envoi">
+            <div id="message"></div></a>
+        </form>
+    </section>
+
+    <!--Catégorie des utilisateurs-->
+    <div id="vous"></div>
+
+    <!--mentions légales-->
+    <section id="footermentions">
+        <footer id="footer">
+            <button class="show-popup2" id="show-popup2">Mentions légales</button>
+            </div>
+            <div class="overlay2" id="overlay2">
+                <div id="popup2">
+                    <h3 class="popuptxt2">Mentions légales</h3>
+                    <p class="popuptxt2">Éditrice, Production graphique et développement : Léa VILLAIN, étudiante en MMI à l'université Gustave Eiffel</p>
+                    <p class="popuptxt2">Hébergeur : Université Gustave Eiffel</p>
+                    <p class="popuptxt2">5 boulevard Descartes - Champs-sur-Marne - 77454 Marne-la-Vallée Cedex2 - Tél
+                    : 33(1).60.95.75.00 - Fax : 33(1).60.95.75.75</p>
+                    <p class="popuptxt2">Images et icônes réalisées par Léa Villain.</p>
+                    <p class="popuptxt2">L'adresse de courriel ainsi que l'adresse IP sont collectées pour générer l'analogie personnalisée. Pour toute question concernant la collecte et le traitement de vos données par l'UGE, veuillez contacter Philippe Gambette à l'adresse suivante : <b>philippe.gambette@univ-eiffel.fr</b>. Les fichiers détenus par l'UGE qui comportent des données à caractère personnel ne seront jamais transmis à des tiers ni ne feront l'objet d'une commercialisation.</p>
+                    <p class="popuptxt2">©2023 Tous droits réservés par Léa VILLAIN.</p>
+    
+                    <button class="close-popup2" id="close-popup2">Fermer</button>
+                </div>
+            </div>
+            <a href="#entrance"><img src="Images/arrowup.png" id="arrowup"></a>
+        </footer>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
